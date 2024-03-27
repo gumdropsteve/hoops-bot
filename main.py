@@ -18,6 +18,30 @@ def socials(update, context):
     update.message.reply_text("https://x.com/HoopsOnchain/")
 
 
+# def todays_games(update, context):
+#     """
+#     Return today's games
+#     """
+
+
+# def pick(update, context):
+#     """
+#     User can pick which team they think will win a game
+#     """
+
+
+# def scores(update, context):
+#     """
+#     Check the scores of the live games
+#     """
+
+
+# def points(update, context):
+#     """
+#     Check how many points a user has scored
+#     """
+
+
 def help(update, context):
     update.message.reply_text(
         """
