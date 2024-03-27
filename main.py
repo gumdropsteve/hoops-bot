@@ -13,6 +13,11 @@ def start(update, context):
     update.message.reply_text("Sup.")
 
 
+def socials(update, context):
+    # return social accounts of Hoops Onchain
+    update.message.reply_text("https://x.com/HoopsOnchain/")
+
+
 def help(update, context):
     update.message.reply_text(
         """
@@ -21,6 +26,7 @@ def help(update, context):
         /start - to start the conversation
         /content - Information about Madness Onchain Challenge
         /contact - Information about contact of Hoops DAO
+        /socials - Hoops Onchain Twitter
         """
         )
 
@@ -31,6 +37,7 @@ dispatch = updater.dispatcher
 
 # initialize messages
 dispatch.add_handler(tg.CommandHandler('start', start))
+dispatch.add_handler(tg.CommandHandler('socials', socials))
 dispatch.add_handler(tg.CommandHandler('help', help))
 
 # make connection with telegram bot
