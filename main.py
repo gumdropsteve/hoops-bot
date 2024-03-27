@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
+# load the API token from the env file
 token = os.getenv("TOKEN")
 
 
@@ -73,7 +74,7 @@ def help(update, context):
 updater = tg.Updater(token, use_context=True)
 dispatch = updater.dispatcher
 
-# initialize messages
+# initialize messages and make commands functional
 dispatch.add_handler(tg.CommandHandler('start', start))
 dispatch.add_handler(tg.CommandHandler('socials', socials))
 dispatch.add_handler(tg.CommandHandler('help', help))
