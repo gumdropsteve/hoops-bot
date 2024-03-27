@@ -40,6 +40,21 @@ def socials(update, context):
 #     """
 #     Check how many points a user has scored
 #     """
+    
+
+def content(update, context):
+    """
+    Tell the user about the challenge
+    """
+    update.message.reply_text(
+        """
+        Madness Onchain is the 1st Annual March Madness Bracket Competition by Hoops DAO!
+        Players submit their picks before each game tips off, and if they're correct they win $HOOPS Points!
+        $HOOPS is a memecoin on the Solana network.
+
+        Players can also earn points by inviting their friends and sharing on social media!
+        """
+        )
 
 
 def help(update, context):
@@ -49,7 +64,6 @@ def help(update, context):
 
         /start - to start the conversation
         /content - Information about Madness Onchain Challenge
-        /contact - Information about contact of Hoops DAO
         /socials - Hoops Onchain Twitter
         """
         )
@@ -63,6 +77,7 @@ dispatch = updater.dispatcher
 dispatch.add_handler(tg.CommandHandler('start', start))
 dispatch.add_handler(tg.CommandHandler('socials', socials))
 dispatch.add_handler(tg.CommandHandler('help', help))
+dispatch.add_handler(tg.CommandHandler('content', content))
 
 # make connection with telegram bot
 updater.start_polling()
